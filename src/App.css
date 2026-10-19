@@ -1,0 +1,281 @@
+
+/* MUSIC EXPLORER - ESTILO PRINCIPAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0b0b16;
+  color: #ffffff;
+}
+
+.music-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #101024, #18112e, #090914);
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+  text-align: center;
+  padding: 55px 20px 35px;
+  background: linear-gradient(135deg, #241044, #421778);
+  border-bottom: 1px solid #7042a5;
+}
+
+.cabecalho h1 {
+  font-size: clamp(36px, 6vw, 58px);
+  font-weight: 800;
+  margin: 0 0 12px;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.cabecalho p {
+  font-size: 19px;
+  color: #d6c6f2;
+  margin: 0;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 65px 24px;
+  text-align: center;
+  flex: 1;
+}
+
+.conteudo > h2 {
+  font-size: clamp(26px, 4vw, 38px);
+  margin: 0 0 20px;
+}
+
+.conteudo > p {
+  color: #b7b4c8;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* PESQUISA */
+
+.pesquisa {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  max-width: 680px;
+  margin: 40px auto 65px;
+}
+
+.pesquisa input {
+  flex: 1;
+  min-width: 0;
+  padding: 17px 20px;
+  border: 1px solid #5d477f;
+  border-radius: 12px;
+  background: #211b34;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.pesquisa input:focus {
+  border-color: #b76cff;
+  box-shadow: 0 0 0 3px #a855f733;
+}
+
+.pesquisa input::placeholder {
+  color: #aaa0bc;
+}
+
+.pesquisa button {
+  padding: 16px 30px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #a855f7, #7135d0);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pesquisa button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px #a855f755;
+}
+
+.pesquisa button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* DESTAQUES */
+
+.destaques {
+  background: #211b34;
+  border: 1px solid #44325e;
+  border-radius: 20px;
+  padding: 45px 25px;
+  max-width: 850px;
+  margin: 0 auto;
+  box-shadow: 0 15px 45px #00000033;
+}
+
+.destaques h2 {
+  font-size: 28px;
+  margin: 0 0 20px;
+  color: #d5adff;
+}
+
+.destaques p {
+  color: #bdb5cf;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* RESULTADOS DA PESQUISA */
+
+.resultados {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.resultados > h2 {
+  font-size: 30px;
+  color: #e3c5ff;
+  margin-bottom: 40px;
+}
+
+/* GRADE DE MÚSICAS */
+
+.grid-musicas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+/* CARDS DAS MÚSICAS */
+
+.card-musica {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 18px;
+  background: linear-gradient(145deg, #251b3e, #1a142e);
+  border: 1px solid #493366;
+  border-radius: 18px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 25px #00000030;
+}
+
+.card-musica:hover {
+  transform: translateY(-6px);
+  border-color: #a855f7;
+  box-shadow: 0 15px 35px #a855f733;
+}
+
+/* CAPAS DOS ÁLBUNS */
+
+.card-musica img {
+  display: block;
+  width: 170px;
+  height: 170px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 20px #00000055;
+}
+
+/* INFORMAÇÕES DAS MÚSICAS */
+
+.card-musica h3 {
+  font-size: 19px;
+  color: #ffffff;
+  margin: 0 0 12px;
+  overflow-wrap: anywhere;
+}
+
+.card-musica p {
+  font-size: 15px;
+  color: #c7b9db;
+  margin: 5px 0;
+  overflow-wrap: anywhere;
+}
+
+.card-musica p:last-of-type {
+  color: #a99abc;
+  font-size: 14px;
+}
+
+/* PLAYER DE ÁUDIO */
+
+.card-musica audio {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin-top: auto;
+  padding-top: 20px;
+  height: 74px;
+}
+
+/* RODAPÉ */
+
+.rodape {
+  text-align: center;
+  padding: 25px 15px;
+  border-top: 1px solid #342746;
+  background: #0c0a16;
+  color: #9d94ae;
+  font-size: 14px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+  .grid-musicas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .cabecalho {
+    padding: 40px 15px;
+  }
+
+  .conteudo {
+    padding: 45px 18px;
+  }
+
+  .pesquisa {
+    flex-direction: column;
+  }
+
+  .pesquisa button {
+    width: 100%;
+  }
+
+  .grid-musicas {
+    grid-template-columns: 1fr;
+  }
+
+  .card-musica {
+    padding: 25px 20px;
+  }
+
+  .destaques {
+    padding: 30px 18px;
+  }
+}
